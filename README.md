@@ -22,7 +22,7 @@ a. Create a conda virtual environment and activate it.
 
 ```shell
 conda create -n bpformer python=3.8.13
-git clone https://github.com/CYing18/BPformer.git
+git clone https://github.com/xmuyulab/BPformer.git
 cd BPformer
 conda activate bpformer
 ```

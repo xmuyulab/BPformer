@@ -75,9 +75,8 @@ class pathway_guided_transformer(nn.Module):
         super().__init__()
 
         self.to_segment_num = pathway_number
-
         self.mutil_linear_layers =  nn.ModuleList([])
-        # 每个通道特征
+        # for each pathway
         for i in range(len(pathway_number)):
             self.mutil_linear_layers.append(nn.Sequential(
                 nn.LayerNorm(pathway_number[i]),
@@ -87,9 +86,7 @@ class pathway_guided_transformer(nn.Module):
         
         self.cls_token = nn.Parameter(torch.randn(dim))
         self.dropout = nn.Dropout(emb_dropout)
-
         self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim, dropout)
-
         self.mlp_head = nn.Sequential(
             nn.LayerNorm(dim),
             nn.Linear(dim, num_classes)
@@ -98,7 +95,6 @@ class pathway_guided_transformer(nn.Module):
     def forward(self, series):
 
         segments = torch.split(series, self.to_segment_num, dim=-1)
-
         segnum = 0
         transformed_tensors = []
         for layers in self.mutil_linear_layers:
@@ -107,18 +103,12 @@ class pathway_guided_transformer(nn.Module):
             segnum = segnum + 1
 
         concat_segment = torch.cat(transformed_tensors, dim=-2)
-
         x = concat_segment
         b, n, _ = x.shape
-
         cls_tokens = repeat(self.cls_token, 'd -> b d', b = b)
-
         x, ps = pack([cls_tokens, x], 'b * d')
-
         x = self.dropout(x)
-
         x = self.transformer(x)
-
         cls_tokens, _ = unpack(x, ps, 'b * d')
 
         return self.mlp_head(cls_tokens)

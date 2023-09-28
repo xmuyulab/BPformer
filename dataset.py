@@ -13,5 +13,4 @@ class MyDataSet(Dataset):
     def __getitem__(self, item):
         x_mRNA = self.x_mRNA[item, :]
         y_label = self.y_label[item]
-
         return x_mRNA, y_label

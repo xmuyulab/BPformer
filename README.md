@@ -60,7 +60,7 @@ python train.py
 
 BPformer was evaluated in the independent test datasets including the primary tumors from GEO (GEO-RNA-p.pkl), metastatic sites of metastatic tumors from GEO (GEO-RNA-m.pkl), the primary sites of metastatic tumors from GEO, TCGA and ICGC (GEO-RNA-p-m.pkl, TCGA-RNA-p-m.pkl and ICGC-RNA-p-m.pkl).
 
-Our trained model file is saved in Model_weight/best_wight.pth.
+Our trained model file is saved in best_wight.pth, which can be download in https://drive.google.com/drive/folders/1N8iz37klzR6MJfboG-CrAuLDaonsEHIJ.
 
 ```shell
 python test.py

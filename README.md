@@ -1,6 +1,6 @@
 # BPformer: Tracing Unknown Tumor Origins with a Biological Pathway-based Transformer Model
 
-  ![image](https://github.com/CYing18/BPformer/blob/main/img/BPformer.png)
+  ![image](https://github.com/xmuyulab/BPformer/blob/main/img/BPformer.png)
   
 ## Introduction of BPformer
 

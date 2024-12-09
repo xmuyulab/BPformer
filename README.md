@@ -1,7 +1,7 @@
 # BPformer: Tracing Unknown Tumor Origins with a Biological Pathway-based Transformer Model
 
   ![image](https://github.com/xmuyulab/BPformer/blob/main/img/BPformer.png)
-  
+
 ## Introduction of BPformer
 
 In this study, we developed BPformer, a novel deep learning method for tracing the tumor origins of CUP patients that integrates the Transformer model with prior knowledge of 335 biological pathways from the KEGG (Kyoto Encyclopedia of Genes and Genomes) database. This classifier was trained on transcriptomes of 10,410 primary tumors spanning 32 cancer types and tested on three types of independent test datasets, including primary tumors, primary and metastatic sites of metastatic tumors. For clinical practice, BPformer was also validated within our in-house generated CUP samples. Furthermore, BPformer model was comparatively evaluated against four other cancer origin tracing methods.
@@ -66,6 +66,22 @@ Our trained model file is saved in best_wight.pth, which can be download in http
 python test.py
 ```
 
-## Contact
+## License & Usage
+
+If you find our work useful in your research, please consider citing our paper at:
+
+```
+@article{xie2024tracing,
+  title={Tracing unknown tumor origins with a biological-pathway-based transformer model},
+  author={Xie, Jiajing and Chen, Ying and Luo, Shijie and Yang, Wenxian and Lin, Yuxiang and Wang, Liansheng and Ding, Xin and Tong, Mengsha and Yu, Rongshan},
+  journal={Cell Reports Methods},
+  volume={4},
+  number={6},
+  year={2024},
+  publisher={Elsevier}
+}
+```
+
+
 
 Please open an issue or contact xiejiajing@stu.xmu.edu.cn or cying2023@stu.xmu.edu.cn with any questions.

@@ -12,7 +12,7 @@ path_test_data_GEO_p_m = test_data_path + 'GEO-RNA-p-m.pkl'
 path_test_data_GEO_p = test_data_path + 'GEO-RNA-p.pkl'
 
 # Model weight file
-path_weight = 'best_wight.pth'
+path_weight = 'best_weight.pth'
 
 # prediction result
 prediction_path = 'Prediction_result/'

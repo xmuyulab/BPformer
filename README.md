@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ```
 
 ## Preparation of input data
-a. Download the RNAseq data and put them under the path 'RNAseq/Raw'. We provide our experiment dataset in https://drive.google.com/drive/folders/1N8iz37klzR6MJfboG-CrAuLDaonsEHIJ.
+a. Download the RNAseq data and put them under the path 'RNAseq/Raw'. We provide our experiment dataset in https://zenodo.org/records/14863210.
 
 b. Transfer the input RNAseq data into required format (genes are arranged in biological pathways).
 
@@ -60,7 +60,7 @@ python train.py
 
 BPformer was evaluated in the independent test datasets including the primary tumors from GEO (GEO-RNA-p.pkl), metastatic sites of metastatic tumors from GEO (GEO-RNA-m.pkl), the primary sites of metastatic tumors from GEO, TCGA and ICGC (GEO-RNA-p-m.pkl, TCGA-RNA-p-m.pkl and ICGC-RNA-p-m.pkl).
 
-Our trained model file is saved in best_wight.pth, which can be download in https://drive.google.com/drive/folders/1N8iz37klzR6MJfboG-CrAuLDaonsEHIJ.
+Our trained model file is saved in best_weight.pth, which can be download in https://zenodo.org/records/14863210.
 
 ```shell
 python test.py
